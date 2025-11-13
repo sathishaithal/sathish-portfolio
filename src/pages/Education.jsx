@@ -57,28 +57,7 @@ const Education = () => {
     }
   ];
 
-  const certifications = [
-    {
-      title: "Web Development",
-      issuer: "Various Online Platforms",
-      year: "2022-2024"
-    },
-    {
-      title: "Machine Learning Fundamentals",
-      issuer: "Online Courses",
-      year: "2023"
-    },
-    {
-      title: "React.js Development",
-      issuer: "Self-Paced Learning",
-      year: "2023-2024"
-    },
-    {
-      title: "Python Programming",
-      issuer: "Academic Curriculum",
-      year: "2022-2023"
-    }
-  ];
+
 
   return (
     <div className="education">
@@ -115,13 +94,6 @@ const Education = () => {
                         <li key={detailIndex}>{detail}</li>
                       ))}
                     </ul>
-                    
-                    {/* <div className="edu-achievement">
-                      <span className="achievement-badge">
-                        {edu.score.includes('9.23') ? 'First Class with Distinction' : 
-                         edu.score.includes('8.2') ? 'First Class' : 'Completed'}
-                      </span>
-                    </div> */}
                   </div>
                 </div>
               </div>
@@ -129,22 +101,6 @@ const Education = () => {
           </div>
 
           <div className="education-sidebar">
-            {/* <div className="certifications-section">
-              <h3 className="sidebar-title">Certifications & Learning</h3>
-              <div className="certifications-list">
-                {certifications.map((cert, index) => (
-                  <div key={index} className="certification-item">
-                    <div className="cert-icon">📜</div>
-                    <div className="cert-info">
-                      <h4>{cert.title}</h4>
-                      <p>{cert.issuer}</p>
-                      <span className="cert-year">{cert.year}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div> */}
-
             <div className="academic-stats">
               <h3 className="sidebar-title">Academic Highlights</h3>
               <div className="stats-grid">
@@ -160,6 +116,10 @@ const Education = () => {
                   <div className="stat-value">7+</div>
                   <div className="stat-label">Projects</div>
                 </div>
+                <div className="academic-stat">
+                  <div className="stat-value">4</div>
+                  <div className="stat-label">Degrees</div>
+                </div>
               </div>
             </div>
 
@@ -174,6 +134,8 @@ const Education = () => {
                 <span className="skill-tag">Technical Writing</span>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>

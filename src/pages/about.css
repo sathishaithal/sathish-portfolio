@@ -1,8 +1,9 @@
-
+/* About.css */
 .about {
   padding: 100px 0;
-  background: #f8f9fa;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
   min-height: 100vh;
+  color: white;
 }
 
 .section-header {
@@ -12,16 +13,20 @@
 
 .section-title {
   font-size: 3rem;
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.5px;
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
   margin: 0 auto;
   border-radius: 2px;
   position: relative;
@@ -34,7 +39,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #764ba2, #667eea);
+  background: linear-gradient(45deg, #0077b6, #00b4d8);
   border-radius: 2px;
   opacity: 0.7;
 }
@@ -47,14 +52,15 @@
 }
 
 .intro-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
   margin-bottom: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
 
@@ -65,7 +71,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -76,11 +82,12 @@
 
 .intro-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 180, 216, 0.2);
+  border-color: rgba(0, 180, 216, 0.3);
 }
 
 .intro-card h2 {
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 600;
@@ -89,7 +96,7 @@
 
 .intro-card p {
   line-height: 1.8;
-  color: #555;
+  color: #b0b0b0;
   font-size: 1.1rem;
   margin-bottom: 0;
 }
@@ -100,14 +107,16 @@
 }
 
 .experience-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #667eea;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid #00b4d8;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .experience-card::before {
@@ -117,7 +126,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.03) 100%);
+  background: linear-gradient(135deg, rgba(0, 180, 216, 0.05) 0%, rgba(0, 119, 182, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -128,7 +137,8 @@
 
 .experience-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 180, 216, 0.25);
+  border-color: rgba(0, 180, 216, 0.3);
 }
 
 .exp-icon {
@@ -136,6 +146,7 @@
   margin-bottom: 1rem;
   display: inline-block;
   animation: bounce 2s infinite;
+  filter: drop-shadow(0 0 10px rgba(0, 180, 216, 0.5));
 }
 
 @keyframes bounce {
@@ -144,14 +155,14 @@
 }
 
 .experience-card h3 {
-  color: #2c3e50;
+  color: #ffffff;
   margin-bottom: 0.5rem;
   font-size: 1.4rem;
   font-weight: 600;
 }
 
 .company {
-  color: #667eea;
+  color: #00b4d8;
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
@@ -159,7 +170,7 @@
 }
 
 .duration {
-  color: #7f8c8d;
+  color: #90e0ef;
   margin-bottom: 1rem;
   font-style: italic;
   font-size: 0.95rem;
@@ -176,9 +187,9 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #555;
+  color: #b0b0b0;
   line-height: 1.6;
-  border-bottom: 1px solid #f8f9fa;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -187,13 +198,13 @@
 }
 
 .responsibilities li:hover {
-  color: #2c3e50;
+  color: #ffffff;
   transform: translateX(5px);
 }
 
 .responsibilities li:before {
   content: '▸';
-  color: #667eea;
+  color: #00b4d8;
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -202,7 +213,7 @@
 
 .responsibilities li:hover:before {
   transform: translateX(3px);
-  color: #764ba2;
+  color: #0077b6;
 }
 
 .about-stats {
@@ -214,15 +225,16 @@
 }
 
 .stat-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 .stat-card::before {
@@ -232,7 +244,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -242,13 +254,14 @@
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 180, 216, 0.25);
+  border-color: rgba(0, 180, 216, 0.3);
 }
 
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -258,13 +271,14 @@
 }
 
 .stat-label {
-  color: #7f8c8d;
+  color: #90e0ef;
   font-weight: 600;
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
+/* Animation Classes */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -304,6 +318,85 @@
   }
 }
 
+
+.skills-overview {
+  margin-top: 4rem;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.overview-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 4px solid #00b4d8;
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 180, 216, 0.1);
+}
+
+.skill-category h4 {
+  color: #00b4d8;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.skill-category p {
+  color: #b0b0b0;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Update existing stats to 4 columns */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+@media (min-width: 768px) {
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skills-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
 .intro-card { animation-delay: 0.1s; }
 .experience-card:nth-child(1) { animation-delay: 0.2s; }
 .experience-card:nth-child(2) { animation-delay: 0.3s; }
@@ -311,6 +404,7 @@
 .stat-card:nth-child(2) { animation-delay: 0.2s; }
 .stat-card:nth-child(3) { animation-delay: 0.3s; }
 
+/* Responsive Design */
 @media (max-width: 1200px) {
   .about-content {
     gap: 3rem;
@@ -459,10 +553,11 @@
   .stat-card {
     box-shadow: none;
     border: 1px solid #ddd;
+    background: white;
   }
   
   .stat-number {
-    -webkit-text-fill-color: #667eea;
+    -webkit-text-fill-color: #00b4d8;
     background: none;
   }
 }

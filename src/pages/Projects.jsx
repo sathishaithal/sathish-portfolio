@@ -12,8 +12,8 @@ const Projects = () => {
       type: "Company Project",
       status: "ongoing",
       description: "Enterprise Resource Planning system for managing business processes. Integrating modules for finance, HR, inventory, and customer relationship management. Streamlining operations and providing real-time business intelligence.",
-      technologies: [],
-      link: "#",
+      technologies: ["PHP", "MySQL", "Laravel","JavaScript", "HTML", "CSS"],
+      // link: "#",
       image: "🏢"
     },
     {
@@ -23,34 +23,65 @@ const Projects = () => {
       type: "Company Project",
       status: "ongoing",
       description: "Real-time business intelligence dashboard with interactive charts, data visualization. Provides insights into sales performance and operational metrics.",
-      technologies: [],
-      link: "#",
+      technologies: ["Angular", "TypeScript", "PHP", "REST API"],
       image: "📊"
     },
     {
       id: 3,
+      title: "MERN Fullstack ERP Reports",
+      year: "2024",
+      type: "Company Project",
+      status: "ongoing",
+      description: "A comprehensive reporting module built with MERN stack for ERP systems. Features dynamic report generation, data visualization, and export capabilities. Includes real-time analytics and customizable dashboards for business intelligence.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      image: "📈"
+    },
+    {
+      id: 4,
       title: "MERN Notes App",
       year: "2024",
       type: "Full Stack Project",
       status: "completed",
       description: "A complete full-stack note-taking application with user authentication and CRUD operations. Features JWT authentication, real-time updates, and user-specific data isolation. Built with React, Node.js, Express, and MongoDB.",
       technologies: ["React", "Node.js", "Express", "MongoDB", "JWT", "REST API"],
-      link: "https://github.com/yourusername/mern-notes-app",
+      link: "https://github.com/sathishaithal/MERN-Notes",
       image: "📝"
     },
     {
-      id: 4,
+      id: 5,
       title: "CardioForesight",
       year: "2024",
       type: "Academic Project",
       status: "completed",
       description: "Employes AI to predict cardiovascular risk, offering personalized preventive strategies. Utilizing XGBoost and health parameters like BMI, it provides tailored diet/exercise plans and actionable insights.",
       technologies: ["Python", "Machine Learning", "XGBoost", "AI"],
-      link: "https://sathishaithal.github.io/portfolio/",
+      link: "https://github.com/sathishaithal/CardioForesight",
       image: "❤️"
     },
+        {
+      id: 6,
+      title: "Quiz Application",
+      year: "2023",
+      type: "Academic Project",
+      status: "completed",
+      description: "A mobile application developed using Java and Android Studio that offers an immersive quiz experience. Users answer questions across various topics and receive detailed results instantly.",
+      technologies: ["Java", "Android Studio", "Mobile Development"],
+      link: "https://github.com/sathishaithal/quiz-MobileApplication",
+      image: "📝"
+    },
+     {
+      id: 7,
+      title: "Live Weather App",
+      year: "2022",
+      type: "Personal Project",
+      status: "completed",
+      description: "Experience live weather updates by entering a city name. Seamlessly integrated with weather APIs, it offers real-time updates. Enhance planning with instant access to essential weather information.",
+      technologies: ["HTML", "CSS", "JavaScript", "API Integration"],
+      link: "https://sathishaithal.github.io/saweather.github.io/",
+      image: "🌤️"
+    },
     {
-      id: 5,
+      id: 8,
       title: "Product Comparison",
       year: "2023",
       type: "Academic Project",
@@ -60,19 +91,9 @@ const Projects = () => {
       link: "#",
       image: "🛒"
     },
+
     {
-      id: 6,
-      title: "Quiz Application",
-      year: "2023",
-      type: "Academic Project",
-      status: "completed",
-      description: "A mobile application developed using Java and Android Studio that offers an immersive quiz experience. Users answer questions across various topics and receive detailed results instantly.",
-      technologies: ["Java", "Android Studio", "Mobile Development"],
-      link: "#",
-      image: "📝"
-    },
-    {
-      id: 7,
+      id: 9,
       title: "Basic Banking System",
       year: "2023",
       type: "Personal Project",
@@ -135,9 +156,18 @@ const Projects = () => {
                     
                     <p className="project-description">{project.description}</p>
                     
-                   
+                    <div className="project-technologies">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="tech-tag">{tech}</span>
+                      ))}
+                    </div>
                     
-                    
+                    <div className="project-actions">
+                      {/* <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
+                        View Details
+                        <span className="link-arrow">→</span>
+                      </a> */}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -147,7 +177,7 @@ const Projects = () => {
 
         {/* Completed Projects Section */}
         <div className="projects-section">
-          <h2 className="section-subtitle">Completed Projects</h2>
+          <h2 className="section-subtitle">Academic and Other Projects</h2>
           <div className="projects-grid">
             {displayedCompletedProjects.map((project, index) => (
               <div key={project.id} className="project-card completed-card" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -174,7 +204,7 @@ const Projects = () => {
                   
                   <div className="project-actions">
                     <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                      {project.id === 3 ? "View Project" : "View Details"}
+                      {project.id === 4 || project.id === 5 ? "View Project" : "View Details"}
                       <span className="link-arrow">→</span>
                     </a>
                   </div>

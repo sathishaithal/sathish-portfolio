@@ -1,5 +1,6 @@
+/* Navigation.css - Updated with Consistent Coloring */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(12, 12, 12, 0.95);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 1rem 0;
@@ -7,15 +8,16 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 180, 216, 0.2);
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.15);
+  background: rgba(12, 12, 12, 0.98);
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
   padding: 0.75rem 0;
+  border-bottom-color: rgba(0, 180, 216, 0.3);
 }
 
 .nav-container {
@@ -28,11 +30,11 @@
 }
 
 .nav-logo a {
-  color: #2c3e50;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: 900;
-  background: linear-gradient(45deg, #f77700, #ff0000);
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -48,7 +50,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
   transition: width 0.3s ease;
 }
 
@@ -58,12 +60,13 @@
 
 .nav-logo a:hover {
   transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(0, 180, 216, 0.5);
 }
 
 /* Navigation Menu */
 .nav-menu {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -71,7 +74,7 @@
 }
 
 .nav-link {
-  color: #2c3e50;
+  color: #b0b0b0;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
@@ -91,7 +94,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.1), transparent);
   transition: left 0.5s ease;
 }
 
@@ -100,11 +103,11 @@
 }
 
 .nav-link:hover {
-  color: #667eea;
+  color: #00b4d8;
   transform: translateY(-2px);
-  background: rgba(102, 126, 234, 0.05);
-  border-color: rgba(102, 126, 234, 0.2);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+  background: rgba(0, 180, 216, 0.05);
+  border-color: rgba(0, 180, 216, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.2);
 }
 
 .nav-link:active {
@@ -114,9 +117,10 @@
 
 /* Active Link Style */
 .nav-link.active {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #00b4d8, #0077b6);
   color: white;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+  border-color: rgba(0, 180, 216, 0.3);
 }
 
 /* Mobile Toggle Button */
@@ -132,8 +136,8 @@
 }
 
 .nav-toggle:hover {
-  background: rgba(102, 126, 234, 0.1);
-  border-color: rgba(102, 126, 234, 0.2);
+  background: rgba(0, 180, 216, 0.1);
+  border-color: rgba(0, 180, 216, 0.2);
 }
 
 .nav-toggle:active {
@@ -143,7 +147,7 @@
 .bar {
   width: 25px;
   height: 3px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #00b4d8, #90e0ef);
   margin: 3px 0;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 2px;
@@ -152,7 +156,7 @@
 /* Hamburger Animation */
 .nav-toggle.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
-  background: #667eea;
+  background: #00b4d8;
 }
 
 .nav-toggle.active .bar:nth-child(2) {
@@ -162,7 +166,7 @@
 
 .nav-toggle.active .bar:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
-  background: #667eea;
+  background: #00b4d8;
 }
 
 /* Mobile Styles */
@@ -178,15 +182,15 @@
     right: -100%;
     width: 280px;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(12, 12, 12, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.1);
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: -10px 0 50px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid rgba(0, 180, 216, 0.2);
     gap: 0;
   }
 
@@ -201,7 +205,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%);
+    background: linear-gradient(135deg, rgba(0, 180, 216, 0.05) 0%, rgba(0, 119, 182, 0.05) 100%);
     pointer-events: none;
   }
 
@@ -232,10 +236,10 @@
   .nav-menu.active .nav-link:nth-child(6) { transition-delay: 0.35s; }
 
   .nav-link:hover {
-    background: linear-gradient(45deg, #667eea, #764ba2);
+    background: linear-gradient(45deg, #00b4d8, #0077b6);
     color: white;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 180, 216, 0.3);
   }
 
   .navbar {
@@ -276,7 +280,7 @@
   }
 
   .nav-menu {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .nav-link {
@@ -315,41 +319,52 @@ html {
 
 /* Focus styles for accessibility */
 .nav-link:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid #00b4d8;
   outline-offset: 2px;
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(0, 180, 216, 0.1);
 }
 
 .nav-toggle:focus {
-  outline: 2px solid #667eea;
+  outline: 2px solid #00b4d8;
   outline-offset: 2px;
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
   .navbar {
-    background: rgba(30, 30, 30, 0.95);
-    border-bottom-color: rgba(255, 255, 255, 0.1);
+    animation: none;
   }
-
-  .navbar.scrolled {
-    background: rgba(30, 30, 30, 0.98);
+  
+  .nav-link,
+  .nav-toggle {
+    transition: none;
   }
+  
+  .nav-menu.active .nav-link {
+    transition: none;
+  }
+}
 
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .navbar {
+    background: #000000;
+    border-bottom: 2px solid #00b4d8;
+  }
+  
   .nav-link {
-    color: #e0e0e0;
+    border: 1px solid #00b4d8;
   }
-
-  .nav-link:hover {
-    color: #667eea;
-    background: rgba(102, 126, 234, 0.1);
+  
+  .nav-link.active {
+    background: #00b4d8;
+    color: #000000;
   }
+}
 
-  .nav-menu {
-    background: rgba(30, 30, 30, 0.98);
-  }
-
-  .nav-menu::before {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+/* Print styles */
+@media print {
+  .navbar {
+    display: none;
   }
 }

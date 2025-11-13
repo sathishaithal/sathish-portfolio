@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import profileImage from '../assets/images/profile.jpg';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,9 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlert] = useState({ show: false, type: '', message: '' });
+
+  // Form is disabled for UI display
+  const isFormDisabled = true;
 
   const validateForm = () => {
     const newErrors = {};
@@ -40,6 +44,8 @@ const Contact = () => {
   };
 
   const handleChange = (e) => {
+    if (isFormDisabled) return;
+    
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -56,12 +62,16 @@ const Contact = () => {
   };
 
   const showAlert = (type, message) => {
+    if (isFormDisabled) return;
+    
     setAlert({ show: true, type, message });
     setTimeout(() => setAlert({ show: false, type: '', message: '' }), 5000);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (isFormDisabled) return;
     
     if (!validateForm()) {
       showAlert('error', 'Please fix the errors in the form.');
@@ -128,12 +138,14 @@ const Contact = () => {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-card">
-              <div className="info-icon">👤</div>
-              <div className="info-content">
-                <h3>Name</h3>
-                <p>Sathish Aithal V S</p>
-              </div>
+            <div className="info-icon">
+              <img src={profileImage} alt="Sathish Aithal" className="info-image" />
             </div>
+            <div className="info-content">
+              <h3>Name</h3>
+              <p>Sathish Aithal V S</p>
+            </div>
+          </div>
 
             <div className="info-card">
               <div className="info-icon">📍</div>
@@ -177,7 +189,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter your full name"
-                  disabled={isLoading}
+                  disabled={isLoading || isFormDisabled}
                   className={errors.name ? 'error' : ''}
                 />
                 {errors.name && <span className="error-message">{errors.name}</span>}
@@ -193,7 +205,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter your email address"
-                  disabled={isLoading}
+                  disabled={isLoading || isFormDisabled}
                   className={errors.email ? 'error' : ''}
                 />
                 {errors.email && <span className="error-message">{errors.email}</span>}
@@ -209,7 +221,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter the subject"
-                  disabled={isLoading}
+                  disabled={isLoading || isFormDisabled}
                   className={errors.subject ? 'error' : ''}
                 />
                 {errors.subject && <span className="error-message">{errors.subject}</span>}
@@ -225,7 +237,7 @@ const Contact = () => {
                   required
                   rows="5"
                   placeholder="Enter your message..."
-                  disabled={isLoading}
+                  disabled={isLoading || isFormDisabled}
                   className={errors.message ? 'error' : ''}
                 ></textarea>
                 {errors.message && <span className="error-message">{errors.message}</span>}
@@ -234,7 +246,7 @@ const Contact = () => {
               <button 
                 type="submit" 
                 className={`submit-btn ${isLoading ? 'loading' : ''}`}
-                disabled={isLoading}
+                disabled={isLoading || isFormDisabled}
               >
                 {isLoading ? (
                   <>

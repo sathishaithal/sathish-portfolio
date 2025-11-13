@@ -3,14 +3,13 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import profileImage from '../assets/images/profile.jpg';
 
-
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const texts = ['Web Developer', 'Software Developer', 'React Developer', 'MCA Graduate', 'ML Enthusiast'];
+  const texts = ['Web Developer', 'Software Developer', 'React Developer', 'MCA Graduate'];
 
   useEffect(() => {
     const currentText = texts[currentTextIndex];
@@ -60,8 +59,10 @@ const Home = () => {
               </div>
               
               <p className="hero-description">
-                Software Developer & MCA Graduate passionate about creating innovative web solutions
-                and machine learning applications. Currently working as a Software Developer.
+               Passionate Software Engineer specializing in modern web technologies and machine learning. 
+                Currently building enterprise-level solutions as a Software Developer, with expertise in 
+                React, Angular, PHP, and full-stack development. Creating scalable applications that 
+                solve real-world business challenges through innovative technology.
               </p>
               
               <div className="hero-buttons">
@@ -75,11 +76,11 @@ const Home = () => {
 
               <div className="quick-stats">
                 <div className="stat">
-                  <h3>8+</h3>
+                  <h3>7+</h3>
                   <p>Projects</p>
                 </div>
                 <div className="stat">
-                  <h3>8 Months</h3>
+                  <h3>10 Months</h3>
                   <p>Experience</p>
                 </div>
                 <div className="stat">
@@ -91,36 +92,20 @@ const Home = () => {
             
             <div className="hero-image">
               <div className="image-container">
-                <div className="profile-card">
-                  <div className="card-inner">
-                    <div className="card-front">
-                      <div className="profile-content">
-                        <div className="avatar-large">
-                          <img src={profileImage} alt="Sathish Aithal" />
-
-                        </div>
-                        <h3>Sathish Aithal V S</h3>
-                        <p>Software Developer</p>
-                        <div className="location">
-                          <span>📍</span> Bengaluru, India
-                        </div>
-                      </div>
+                <div className="profile-display">
+                  <div className="photo-section">
+                    <img src={profileImage} alt="Sathish Aithal" className="profile-photo" />
+                  </div>
+                  <div className="info-section">
+                    <h3>Sathish Aithal V S</h3>
+                    <p>Software Developer</p>
+                    <div className="location">
+                      Bengaluru, India
                     </div>
-                    <div className="card-back">
-                      <div className="back-content">
-                        <h4>Currently Working As</h4>
-                        <p>Software Developer</p>
-                        <div className="contact-info">
-                          <p>📧 sathishaithal2001@gmail.com</p>
-                        </div>
-                      </div>
+                    <div className="contact-info">
+                      <p>sathishaithal2001@gmail.com</p>
                     </div>
                   </div>
-                </div>
-                <div className="floating-dots">
-                  <div className="dot dot-1"></div>
-                  <div className="dot dot-2"></div>
-                  <div className="dot dot-3"></div>
                 </div>
               </div>
             </div>
