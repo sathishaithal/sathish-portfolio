@@ -76,6 +76,12 @@ npm run deploy
 
 Builds the project and deploys `dist/` to GitHub Pages.
 
+```GitHub deployment
+npm run build
+npm install gh-pages --save-dev
+npm run deploy
+```
+
 ## Project Structure
 
 ```text
