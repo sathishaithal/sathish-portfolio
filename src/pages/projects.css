@@ -1,9 +1,9 @@
 /* Projects.css */
 .projects {
   padding: 100px 0;
-  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  background: var(--page-gradient);
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
 }
 
 .container {
@@ -20,17 +20,15 @@
 .section-title {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 1rem;
 }
 
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   margin: 0 auto 1.5rem;
   border-radius: 2px;
   position: relative;
@@ -43,14 +41,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  background: var(--accent-gradient-reverse);
   border-radius: 2px;
   opacity: 0.7;
 }
 
 .section-subtitle {
   font-size: 1.3rem;
-  color: #90e0ef;
+  color: var(--section-subtitle);
   font-weight: 500;
 }
 
@@ -62,12 +60,12 @@
 }
 
 .stat-badge {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 2rem 1.5rem;
   border-radius: 16px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--card-border);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -81,27 +79,25 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
 }
 
 .stat-badge:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 180, 216, 0.25);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 15px 35px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .stat-badge h3 {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 0.5rem;
 }
 
 .stat-badge p {
-  color: #90e0ef;
+  color: var(--section-subtitle);
   font-weight: 600;
   font-size: 0.95rem;
 }
@@ -113,13 +109,10 @@
 .projects-section h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--accent-soft);
   margin-bottom: 2rem;
   text-align: center;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  text-shadow: 0 0 18px var(--accent-glow);
 }
 
 .projects-grid {
@@ -130,24 +123,24 @@
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   overflow: hidden;
   transition: all 0.4s ease;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
   backdrop-filter: blur(10px);
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 180, 216, 0.3);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 20px 40px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .ongoing-card {
-  border-left: 5px solid #00b4d8;
+  border-left: 5px solid var(--accent);
 }
 
 .completed-card {
@@ -168,7 +161,7 @@
 }
 
 .ongoing-badge {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
 }
 
@@ -180,7 +173,7 @@
 .project-image {
   position: relative;
   height: 120px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,7 +189,7 @@
   position: absolute;
   top: 15px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.24);
   color: white;
   padding: 4px 12px;
   border-radius: 15px;
@@ -221,25 +214,25 @@
 .project-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-primary);
   margin: 0;
   line-height: 1.3;
 }
 
 .project-type {
-  background: rgba(255, 255, 255, 0.1);
-  color: #90e0ef;
+  background: var(--surface-highlight);
+  color: var(--section-subtitle);
   padding: 4px 12px;
   border-radius: 15px;
   font-size: 0.8rem;
   font-weight: 600;
   white-space: nowrap;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--card-border);
   backdrop-filter: blur(10px);
 }
 
 .project-description {
-  color: #b0b0b0;
+  color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
@@ -253,22 +246,22 @@
 }
 
 .tech-tag {
-  background: rgba(0, 180, 216, 0.1);
-  color: #00b4d8;
+  background: var(--chip-bg);
+  color: var(--accent);
   padding: 6px 12px;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 600;
-  border: 1px solid rgba(0, 180, 216, 0.3);
+  border: 1px solid var(--chip-border);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
 .tech-tag:hover {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .project-actions {
@@ -276,7 +269,7 @@
 }
 
 .project-link {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   padding: 10px 24px;
   border-radius: 25px;
@@ -287,15 +280,15 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 15px var(--accent-glow);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .project-link:hover {
   transform: translateX(5px) translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.4);
+  box-shadow: 0 8px 25px var(--accent-glow);
   color: white;
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  background: var(--accent-gradient-reverse);
 }
 
 .link-arrow {
@@ -310,11 +303,11 @@
   text-align: center;
   margin-top: 3rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--divider-color);
 }
 
 .show-more-btn, .show-less-btn {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   border: none;
   padding: 14px 35px;
@@ -326,14 +319,14 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 15px var(--accent-glow);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .show-more-btn:hover, .show-less-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.4);
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  box-shadow: 0 8px 25px var(--accent-glow);
+  background: var(--accent-gradient-reverse);
 }
 
 .btn-arrow {

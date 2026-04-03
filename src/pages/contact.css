@@ -2,9 +2,9 @@
 
 .contact {
   padding: 100px 0;
-  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  background: var(--page-gradient);
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
 }
 
 .container {
@@ -21,10 +21,8 @@
 
 .section-title {
   font-size: 3rem;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 1rem;
   font-weight: 700;
 }
@@ -32,7 +30,7 @@
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   margin: 0 auto;
   border-radius: 2px;
   position: relative;
@@ -45,14 +43,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  background: var(--accent-gradient-reverse);
   border-radius: 2px;
   opacity: 0.7;
 }
 
 .section-subtitle {
   text-align: center;
-  color: #90e0ef;
+  color: var(--section-subtitle);
   font-size: 1.2rem;
   margin-top: 1rem;
   font-weight: 300;
@@ -74,72 +72,72 @@
 }
 
 .info-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   display: flex;
   align-items: center;
   gap: 1rem;
   transition: all 0.3s ease;
-  border-left: 4px solid #00b4d8;
+  border-left: 4px solid var(--accent);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .info-card:hover {
   transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
-  border-color: rgba(0, 180, 216, 0.5);
+  box-shadow: 0 10px 30px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .info-icon {
   font-size: 2rem;
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 5px 15px var(--accent-glow);
   transition: all 0.3s ease;
 }
 
 .info-card:hover .info-icon {
   transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.4);
+  box-shadow: 0 8px 25px var(--accent-glow);
 }
 
 .info-content h3 {
-  color: #ffffff;
+  color: var(--text-primary);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
   font-weight: 600;
 }
 
 .info-content p {
-  color: #00b4d8;
+  color: var(--accent);
   margin: 0;
   font-weight: 500;
 }
 
 .availability {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   padding: 1.5rem;
   border-radius: 15px;
   text-align: center;
   margin-top: 1rem;
-  box-shadow: 0 5px 20px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 5px 20px var(--accent-glow);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 .availability:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.4);
+  box-shadow: 0 10px 30px var(--accent-glow);
 }
 
 .availability h3 {
@@ -156,24 +154,31 @@
 
 /* Contact Form Styles */
 .contact-form-container {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
   transition: all 0.3s ease;
 }
 
 .contact-form-container:hover {
-  box-shadow: 0 15px 40px rgba(0, 180, 216, 0.25);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 15px 40px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.coming-soon-note {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  color: var(--section-subtitle);
+  font-size: 0.95rem;
 }
 
 .form-group {
@@ -183,7 +188,7 @@
 }
 
 .form-group label {
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -191,27 +196,27 @@
 .form-group input,
 .form-group textarea {
   padding: 1rem;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--input-border);
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
   font-family: inherit;
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
+  background: var(--input-bg);
+  color: var(--text-primary);
   backdrop-filter: blur(10px);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: #b0b0b0;
+  color: var(--text-muted);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #00b4d8;
-  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--surface-highlight-strong);
+  background: var(--card-bg);
 }
 
 .form-group textarea {
@@ -236,7 +241,7 @@ textarea.error {
 
 /* Submit Button */
 .submit-btn {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -250,14 +255,14 @@ textarea.error {
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 15px var(--accent-glow);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .submit-btn:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0, 180, 216, 0.4);
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  box-shadow: 0 10px 25px var(--accent-glow);
+  background: var(--accent-gradient-reverse);
 }
 
 .btn-arrow {
@@ -280,7 +285,7 @@ textarea.error {
   position: relative;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .alert-success {
@@ -360,11 +365,11 @@ textarea.error {
   text-align: center;
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--divider-color);
 }
 
 .footer-note p {
-  color: #90e0ef;
+  color: var(--section-subtitle);
   margin-bottom: 1rem;
   font-weight: 300;
 }
@@ -376,21 +381,21 @@ textarea.error {
 }
 
 .social-link {
-  color: #00b4d8;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   padding: 0.5rem 1rem;
-  border: 2px solid #00b4d8;
+  border: 2px solid var(--accent);
   border-radius: 25px;
   transition: all 0.3s ease;
-  background: rgba(0, 180, 216, 0.1);
+  background: var(--surface-highlight);
 }
 
 .social-link:hover {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .info-image {
@@ -398,7 +403,7 @@ textarea.error {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #00b4d8;
+  border: 2px solid var(--accent);
 }
 
 /* Responsive Design */

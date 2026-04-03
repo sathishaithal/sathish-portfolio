@@ -1,16 +1,112 @@
-# React + Vite
+# Sathish Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React and Vite.
 
-Currently, two official plugins are available:
+This project showecases:
+- Home
+- About
+- Skills
+- Projects
+- Education
+- Contact
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+It includes:
+- Light and dark theme switch
+- Auto scroll to top on route change
+- Responsive layout
+- GitHub Pages deployment support
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router
+- CSS
+- ESLint
 
-## Expanding the ESLint configuration
+## Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Start the development server:
+
+```bash
+npm run dev
+```
+
+3. Open the local URL shown in the terminal, usually:
+
+```bash
+http://localhost:5173/
+```
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+
+Starts the Vite development server.
+
+```bash
+npm run build
+```
+
+Creates a production build in `dist/`.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+```bash
+npm run lint
+```
+
+Runs ESLint checks.
+
+```bash
+npm run deploy
+```
+
+Builds the project and deploys `dist/` to GitHub Pages.
+
+## Project Structure
+
+```text
+src/
+  components/    Reusable UI components
+  pages/         Portfolio pages
+  assets/        Images and static assets
+  utils/         Small helper functions
+```
+
+## Routing
+
+This app uses `HashRouter`, which is helpful for GitHub Pages hosting.
+
+## Theme
+
+The portfolio supports both dark and light themes.
+The selected theme is saved in `localStorage`.
+
+## Deployment
+
+This project is configured for GitHub Pages with:
+
+```js
+base: '/sathish-portfolio/'
+```
+
+in `vite.config.js`.
+
+If you change the repository name, update the `base` value and `homepage` in `package.json`.
+
+## Author
+
+Sathish Aithal V S

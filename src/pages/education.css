@@ -1,9 +1,9 @@
 /* Education.css */
 .education {
   padding: 100px 0;
-  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  background: var(--page-gradient);
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
 }
 
 .container {
@@ -20,17 +20,15 @@
 .section-title {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 1rem;
 }
 
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   margin: 0 auto 1.5rem;
   border-radius: 2px;
   position: relative;
@@ -43,14 +41,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  background: var(--accent-gradient-reverse);
   border-radius: 2px;
   opacity: 0.7;
 }
 
 .section-subtitle {
   font-size: 1.3rem;
-  color: #90e0ef;
+  color: var(--section-subtitle);
   font-weight: 500;
 }
 
@@ -83,14 +81,14 @@
 .marker-icon {
   width: 60px;
   height: 60px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   color: white;
-  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 5px 15px var(--accent-glow);
   z-index: 2;
   position: relative;
   transition: all 0.3s ease;
@@ -98,13 +96,13 @@
 
 .marker-icon:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 180, 216, 0.4);
+  box-shadow: 0 8px 25px var(--accent-glow);
 }
 
 .timeline-line {
   width: 3px;
   flex: 1;
-  background: linear-gradient(to bottom, #00b4d8, #0077b6);
+  background: linear-gradient(to bottom, var(--accent), var(--accent-strong));
   margin-top: 1rem;
   border-radius: 2px;
   position: relative;
@@ -117,7 +115,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(0, 180, 216, 0.3), transparent);
+  background: linear-gradient(to bottom, transparent, var(--accent-glow), transparent);
   animation: shimmer 2s infinite;
 }
 
@@ -135,20 +133,20 @@
 }
 
 .edu-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 15px;
-  border-left: 4px solid #00b4d8;
+  border-left: 4px solid var(--accent);
   transition: all 0.3s ease;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .edu-card:hover {
   transform: translateX(10px);
-  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
-  border-color: rgba(0, 180, 216, 0.5);
+  box-shadow: 0 10px 30px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .edu-header {
@@ -159,7 +157,7 @@
 }
 
 .edu-degree {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.4rem;
   margin: 0;
   flex: 1;
@@ -167,14 +165,14 @@
 }
 
 .edu-duration {
-  background: rgba(0, 180, 216, 0.1);
-  color: #00b4d8;
+  background: var(--surface-highlight);
+  color: var(--accent);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-left: 1rem;
-  border: 1px solid rgba(0, 180, 216, 0.3);
+  border: 1px solid var(--chip-border);
   backdrop-filter: blur(10px);
 }
 
@@ -183,21 +181,21 @@
 }
 
 .edu-institution h4 {
-  color: #90e0ef;
+  color: var(--section-subtitle);
   margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
 .edu-score {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   padding: 0.25rem 1rem;
   border-radius: 15px;
   font-size: 0.9rem;
   font-weight: 600;
   display: inline-block;
-  box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .edu-details {
@@ -210,19 +208,19 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #b0b0b0;
+  color: var(--text-muted);
   line-height: 1.5;
   transition: all 0.3s ease;
 }
 
 .edu-details li:hover {
-  color: #ffffff;
+  color: var(--text-primary);
   transform: translateX(5px);
 }
 
 .edu-details li:before {
   content: '✓';
-  color: #00b4d8;
+  color: var(--accent);
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -241,7 +239,7 @@
 }
 
 .sidebar-title {
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -257,27 +255,27 @@
   transform: translateX(-50%);
   width: 40px;
   height: 3px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   border-radius: 2px;
 }
 
 .academic-stats,
 .skills-developed,
 .certifications-section {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
   transition: all 0.3s ease;
 }
 
 .academic-stats:hover,
 .skills-developed:hover,
 .certifications-section:hover {
-  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.25);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 10px 30px var(--accent-glow);
+  border-color: var(--card-border-strong);
   transform: translateY(-5px);
 }
 
@@ -292,39 +290,39 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg-soft);
   border-radius: 10px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .certification-item:hover {
-  background: rgba(0, 180, 216, 0.1);
+  background: var(--surface-highlight);
   transform: translateX(5px);
-  border-color: rgba(0, 180, 216, 0.3);
+  border-color: var(--card-border-strong);
 }
 
 .cert-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
-  filter: drop-shadow(0 0 8px rgba(0, 180, 216, 0.5));
+  filter: drop-shadow(0 0 8px var(--accent-glow));
 }
 
 .cert-info h4 {
-  color: #ffffff;
+  color: var(--text-primary);
   margin: 0 0 0.25rem 0;
   font-size: 1rem;
   font-weight: 600;
 }
 
 .cert-info p {
-  color: #90e0ef;
+  color: var(--section-subtitle);
   margin: 0 0 0.25rem 0;
   font-size: 0.9rem;
 }
 
 .cert-year {
-  color: #00b4d8;
+  color: var(--accent);
   font-size: 0.8rem;
   font-weight: 600;
 }
@@ -338,31 +336,29 @@
 .academic-stat {
   text-align: center;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg-soft);
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-soft);
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .academic-stat:hover {
-  background: rgba(0, 180, 216, 0.1);
+  background: var(--surface-highlight);
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 5px 15px var(--accent-glow);
 }
 
 .stat-value {
   font-size: 1.8rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 0.25rem;
 }
 
 .stat-label {
-  color: #90e0ef;
+  color: var(--section-subtitle);
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -374,22 +370,22 @@
 }
 
 .skill-tag {
-  background: rgba(0, 180, 216, 0.1);
-  color: #00b4d8;
+  background: var(--chip-bg);
+  color: var(--accent);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(0, 180, 216, 0.3);
+  border: 1px solid var(--chip-border);
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
 }
 
 .skill-tag:hover {
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 /* Animations */

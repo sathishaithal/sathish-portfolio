@@ -7,32 +7,24 @@ const Contact = () => {
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [alert, setAlert] = useState({ show: false, type: '', message: '' });
 
-  // Form is disabled for UI display
   const isFormDisabled = true;
 
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
-    }
-
+    if (!formData.subject.trim()) newErrors.subject = 'Subject is required';
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.trim().length < 10) {
@@ -45,34 +37,31 @@ const Contact = () => {
 
   const handleChange = (e) => {
     if (isFormDisabled) return;
-    
+
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
-    // Clear error when user starts typing
+
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ''
+        [name]: '',
       }));
     }
   };
 
   const showAlert = (type, message) => {
     if (isFormDisabled) return;
-    
     setAlert({ show: true, type, message });
     setTimeout(() => setAlert({ show: false, type: '', message: '' }), 5000);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
     if (isFormDisabled) return;
-    
+
     if (!validateForm()) {
       showAlert('error', 'Please fix the errors in the form.');
       return;
@@ -93,12 +82,7 @@ const Contact = () => {
 
       if (data.success) {
         showAlert('success', data.message || 'Message sent successfully! I will get back to you soon.');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
         setErrors({});
       } else {
         showAlert('error', data.message || 'Failed to send message. Please try again.');
@@ -120,16 +104,12 @@ const Contact = () => {
           <p className="section-subtitle">Get in touch for opportunities or just to say hello!</p>
         </div>
 
-        {/* Alert Message */}
         {alert.show && (
           <div className={`alert alert-${alert.type}`}>
             <div className="alert-content">
               {alert.type === 'success' ? '✅' : '❌'} {alert.message}
             </div>
-            <button 
-              className="alert-close" 
-              onClick={() => setAlert({ show: false, type: '', message: '' })}
-            >
+            <button className="alert-close" onClick={() => setAlert({ show: false, type: '', message: '' })}>
               ×
             </button>
           </div>
@@ -138,14 +118,14 @@ const Contact = () => {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-card">
-            <div className="info-icon">
-              <img src={profileImage} alt="Sathish Aithal" className="info-image" />
+              <div className="info-icon">
+                <img src={profileImage} alt="Sathish Aithal" className="info-image" />
+              </div>
+              <div className="info-content">
+                <h3>Name</h3>
+                <p>Sathish Aithal V S</p>
+              </div>
             </div>
-            <div className="info-content">
-              <h3>Name</h3>
-              <p>Sathish Aithal V S</p>
-            </div>
-          </div>
 
             <div className="info-card">
               <div className="info-icon">📍</div>
@@ -178,6 +158,7 @@ const Contact = () => {
           </div>
 
           <div className="contact-form-container">
+            <p className="coming-soon-note">Contact form coming soon. Please use email or social links for now.</p>
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               <div className="form-group">
                 <label htmlFor="name">Full Name *</label>
@@ -243,11 +224,7 @@ const Contact = () => {
                 {errors.message && <span className="error-message">{errors.message}</span>}
               </div>
 
-              <button 
-                type="submit" 
-                className={`submit-btn ${isLoading ? 'loading' : ''}`}
-                disabled={isLoading || isFormDisabled}
-              >
+              <button type="submit" className={`submit-btn ${isLoading ? 'loading' : ''}`} disabled={isLoading || isFormDisabled}>
                 {isLoading ? (
                   <>
                     <div className="spinner"></div>
@@ -265,11 +242,17 @@ const Contact = () => {
         </div>
 
         <div className="footer-note">
-          <p>Created By Sathish Aithal V S - Currently working as Software Developer</p>
+          <p>Created by Sathish Aithal V S - currently working as a Software Developer</p>
           <div className="social-links">
-            <a href="https://github.com/sathishaithal" className="social-link">GitHub</a>
-            <a href="https://www.linkedin.com/in/sathishaithalvs" className="social-link">LinkedIn</a>
-            <a href="https://x.com/SathishAithal?t=km9mqU1wJS55qdCDGOb3Rw&s=09" className="social-link">X (Twitter)</a>
+            <a href="https://github.com/sathishaithal" className="social-link">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/sathishaithalvs" className="social-link">
+              LinkedIn
+            </a>
+            <a href="https://x.com/SathishAithal?t=km9mqU1wJS55qdCDGOb3Rw&s=09" className="social-link">
+              X (Twitter)
+            </a>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 /* About.css */
 .about {
   padding: 100px 0;
-  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  background: var(--page-gradient);
   min-height: 100vh;
-  color: white;
+  color: var(--text-primary);
 }
 
 .section-header {
@@ -13,20 +13,17 @@
 
 .section-title {
   font-size: 3rem;
-  color: #ffffff;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.5px;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .title-underline {
   width: 80px;
   height: 4px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   margin: 0 auto;
   border-radius: 2px;
   position: relative;
@@ -39,7 +36,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, #0077b6, #00b4d8);
+  background: var(--accent-gradient-reverse);
   border-radius: 2px;
   opacity: 0.7;
 }
@@ -52,12 +49,12 @@
 }
 
 .intro-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 2.5rem;
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-soft);
   margin-bottom: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
@@ -71,7 +68,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(45deg, #00b4d8, #0077b6);
+  background: var(--accent-gradient-strong);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -82,12 +79,12 @@
 
 .intro-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 180, 216, 0.2);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 20px 40px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .intro-card h2 {
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 1.5rem;
   font-size: 2rem;
   font-weight: 600;
@@ -96,7 +93,7 @@
 
 .intro-card p {
   line-height: 1.8;
-  color: #b0b0b0;
+  color: var(--text-muted);
   font-size: 1.1rem;
   margin-bottom: 0;
 }
@@ -107,16 +104,16 @@
 }
 
 .experience-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-left: 4px solid #00b4d8;
+  box-shadow: var(--shadow-soft);
+  border-left: 4px solid var(--accent);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .experience-card::before {
@@ -126,7 +123,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(0, 180, 216, 0.05) 0%, rgba(0, 119, 182, 0.05) 100%);
+  background: linear-gradient(135deg, var(--surface-highlight) 0%, rgba(29, 78, 216, 0.05) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -137,8 +134,8 @@
 
 .experience-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 180, 216, 0.25);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 15px 35px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .exp-icon {
@@ -146,7 +143,7 @@
   margin-bottom: 1rem;
   display: inline-block;
   animation: bounce 2s infinite;
-  filter: drop-shadow(0 0 10px rgba(0, 180, 216, 0.5));
+  filter: drop-shadow(0 0 10px var(--accent-glow));
 }
 
 @keyframes bounce {
@@ -155,14 +152,14 @@
 }
 
 .experience-card h3 {
-  color: #ffffff;
+  color: var(--text-primary);
   margin-bottom: 0.5rem;
   font-size: 1.4rem;
   font-weight: 600;
 }
 
 .company {
-  color: #00b4d8;
+  color: var(--accent);
   font-weight: 600;
   margin-bottom: 0.5rem;
   font-size: 1.1rem;
@@ -170,7 +167,7 @@
 }
 
 .duration {
-  color: #90e0ef;
+  color: var(--accent-soft);
   margin-bottom: 1rem;
   font-style: italic;
   font-size: 0.95rem;
@@ -187,9 +184,9 @@
   padding: 0.5rem 0;
   padding-left: 1.5rem;
   position: relative;
-  color: #b0b0b0;
+  color: var(--text-muted);
   line-height: 1.6;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--divider-color);
   transition: all 0.3s ease;
 }
 
@@ -198,13 +195,13 @@
 }
 
 .responsibilities li:hover {
-  color: #ffffff;
+  color: var(--text-primary);
   transform: translateX(5px);
 }
 
 .responsibilities li:before {
   content: '▸';
-  color: #00b4d8;
+  color: var(--accent);
   position: absolute;
   left: 0;
   font-weight: bold;
@@ -213,7 +210,7 @@
 
 .responsibilities li:hover:before {
   transform: translateX(3px);
-  color: #0077b6;
+  color: var(--accent-strong);
 }
 
 .about-stats {
@@ -225,13 +222,13 @@
 }
 
 .stat-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   padding: 2rem;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-soft);
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(10px);
@@ -244,7 +241,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 180, 216, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, var(--surface-highlight-strong), transparent);
   transition: left 0.5s ease;
 }
 
@@ -254,24 +251,22 @@
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 180, 216, 0.25);
-  border-color: rgba(0, 180, 216, 0.3);
+  box-shadow: 0 15px 35px var(--accent-glow);
+  border-color: var(--card-border-strong);
 }
 
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   margin-bottom: 0.5rem;
   display: block;
   line-height: 1;
 }
 
 .stat-label {
-  color: #90e0ef;
+  color: var(--section-subtitle);
   font-weight: 600;
   font-size: 0.95rem;
   text-transform: uppercase;
@@ -322,20 +317,18 @@
 .skills-overview {
   margin-top: 4rem;
   padding: 2.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg);
   border-radius: 20px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--card-border);
 }
 
 .overview-title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-soft);
+  text-shadow: 0 0 18px var(--accent-glow);
   font-weight: 600;
 }
 
@@ -346,27 +339,29 @@
 }
 
 .skill-category {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-bg-soft);
   padding: 1.5rem;
   border-radius: 15px;
-  border-left: 4px solid #00b4d8;
+  border-left: 4px solid var(--accent);
   transition: all 0.3s ease;
 }
 
 .skill-category:hover {
   transform: translateY(-5px);
-  background: rgba(0, 180, 216, 0.1);
+  background: var(--surface-highlight);
+  box-shadow: 0 12px 30px var(--accent-glow);
 }
 
 .skill-category h4 {
-  color: #00b4d8;
+  color: var(--accent-soft);
+  text-shadow: 0 0 12px var(--accent-glow);
   margin-bottom: 0.75rem;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
 .skill-category p {
-  color: #b0b0b0;
+  color: var(--text-muted);
   line-height: 1.6;
   margin: 0;
   font-size: 0.95rem;
@@ -557,7 +552,6 @@
   }
   
   .stat-number {
-    -webkit-text-fill-color: #00b4d8;
-    background: none;
+    color: var(--accent);
   }
 }

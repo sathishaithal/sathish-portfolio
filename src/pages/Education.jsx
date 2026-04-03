@@ -5,59 +5,57 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      degree: "Master of Computer Applications",
-      institution: "Sir M Visvesvaraya Institute of Technology",
-      duration: "2022 - 2024",
-      score: "CGPA: 9.23",
-      icon: "🎓",
+      degree: 'Master of Computer Applications',
+      institution: 'Sir M Visvesvaraya Institute of Technology',
+      duration: '2022 - 2024',
+      score: 'CGPA: 9.23',
+      icon: '🎓',
       details: [
-        "Specialized in Advanced Web Technologies and Machine Learning",
-        "Completed major projects in AI/ML and Web Development",
-        "Participated in various technical workshops and coding competitions"
-      ]
+        'Specialized in advanced web technologies and machine learning',
+        'Completed major projects in AI/ML and web development',
+        'Participated in technical workshops and coding competitions',
+      ],
     },
     {
       id: 2,
-      degree: "Bachelor of Computer Applications",
-      institution: "Bapuji Institute of Hi-Tech Education",
-      duration: "2019 - 2022",
-      score: "CGPA: 8.2",
-      icon: "💻",
+      degree: 'Bachelor of Computer Applications',
+      institution: 'Bapuji Institute of Hi-Tech Education',
+      duration: '2019 - 2022',
+      score: 'CGPA: 8.2',
+      icon: '💻',
       details: [
-        "Foundation in Computer Science fundamentals",
-        "Projects in Web Development and Database Management",
-        "Active participation in college technical festivals"
-      ]
+        'Built a strong foundation in computer science fundamentals',
+        'Completed projects in web development and database management',
+        'Actively participated in college technical festivals',
+      ],
     },
     {
       id: 3,
-      degree: "PUC (PCMB)",
-      institution: "DRM Science PU College",
-      duration: "2017 - 2019",
-      score: "Science Stream",
-      icon: "🔬",
+      degree: 'PUC (PCMB)',
+      institution: 'DRM Science PU College',
+      duration: '2017 - 2019',
+      score: 'Science Stream',
+      icon: '🔬',
       details: [
-        "Physics, Chemistry, Mathematics, Biology",
-        "Foundation for engineering and technology studies",
-        "Developed analytical and problem-solving skills"
-      ]
+        'Studied Physics, Chemistry, Mathematics, and Biology',
+        'Built a foundation for engineering and technology studies',
+        'Developed analytical and problem-solving skills',
+      ],
     },
     {
       id: 4,
-      degree: "SSLC",
-      institution: "Rashtrotthana Vidyalaya School",
-      duration: "2017",
-      score: "School Education",
-      icon: "📚",
+      degree: 'SSLC',
+      institution: 'Rashtrotthana Vidyalaya School',
+      duration: '2017',
+      score: 'School Education',
+      icon: '📚',
       details: [
-        "Completed secondary school education",
-        "Developed interest in mathematics and science",
-        "Participated in various extracurricular activities"
-      ]
-    }
+        'Completed secondary school education',
+        'Developed an early interest in mathematics and science',
+        'Participated in various extracurricular activities',
+      ],
+    },
   ];
-
-
 
   return (
     <div className="education">
@@ -76,19 +74,19 @@ const Education = () => {
                   <div className="marker-icon">{edu.icon}</div>
                   <div className="timeline-line"></div>
                 </div>
-                
+
                 <div className="timeline-content">
                   <div className="edu-card">
                     <div className="edu-header">
                       <h3 className="edu-degree">{edu.degree}</h3>
                       <span className="edu-duration">{edu.duration}</span>
                     </div>
-                    
+
                     <div className="edu-institution">
                       <h4>{edu.institution}</h4>
                       <span className="edu-score">{edu.score}</span>
                     </div>
-                    
+
                     <ul className="edu-details">
                       {edu.details.map((detail, detailIndex) => (
                         <li key={detailIndex}>{detail}</li>
@@ -113,7 +111,7 @@ const Education = () => {
                   <div className="stat-label">BCA CGPA</div>
                 </div>
                 <div className="academic-stat">
-                  <div className="stat-value">7+</div>
+                  <div className="stat-value">8+</div>
                   <div className="stat-label">Projects</div>
                 </div>
                 <div className="academic-stat">
@@ -134,8 +132,6 @@ const Education = () => {
                 <span className="skill-tag">Technical Writing</span>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
