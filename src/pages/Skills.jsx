@@ -1,7 +1,10 @@
 import React from 'react';
 import './Skills.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Skills = () => {
+  useScrollAnimation();
+
   const skills = [
     {
       category: 'Frontend Technologies',
@@ -39,19 +42,25 @@ const Skills = () => {
   return (
     <div className="skills">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header sf">
           <h1 className="section-title">My Skills</h1>
           <div className="title-underline"></div>
           <p className="section-subtitle">Technologies & Frameworks I work with</p>
         </div>
 
         <div className="skills-container">
-          {skills.map((skillCategory, index) => (
-            <div key={index} className="skill-category">
-              <h2 className="category-title">{skillCategory.category}</h2>
+          {skills.map((skillCategory, catIndex) => (
+            <div key={catIndex} className="skill-category">
+              <h2 className="category-title sf" style={{ transitionDelay: '0.05s' }}>
+                {skillCategory.category}
+              </h2>
               <div className="skills-grid">
                 {skillCategory.items.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-card">
+                  <div
+                    key={skillIndex}
+                    className="skill-card sf-scale"
+                    style={{ transitionDelay: `${0.15 + skillIndex * 0.15}s` }}
+                  >
                     <div className="skill-header">
                       <span className="skill-icon">{skill.icon}</span>
                       <h3 className="skill-name">{skill.name}</h3>
@@ -70,7 +79,7 @@ const Skills = () => {
         </div>
 
         <div className="skills-summary">
-          <div className="summary-card">
+          <div className="summary-card sf" style={{ transitionDelay: '0.2s' }}>
             <h3>💡 My Approach</h3>
             <p>
               I believe in continuous learning and practical problem solving. My focus is on building efficient,
@@ -78,7 +87,7 @@ const Skills = () => {
             </p>
           </div>
 
-          <div className="summary-card">
+          <div className="summary-card sf" style={{ transitionDelay: '0.45s' }}>
             <h3>🎯 Current Focus</h3>
             <p>
               I am currently strengthening my React ecosystem knowledge, exploring advanced machine learning,
@@ -86,7 +95,7 @@ const Skills = () => {
             </p>
           </div>
 
-          <div className="summary-card">
+          <div className="summary-card sf" style={{ transitionDelay: '0.7s' }}>
             <h3>🚀 Full-Stack Expertise</h3>
             <p>
               I work across both frontend (React, Angular) and backend (MySQL, Node.js), enabling me to build

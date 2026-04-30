@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import profileImage from '../assets/images/profile.jpg';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Contact = () => {
+  useScrollAnimation();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -98,7 +101,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="container">
-        <div className="section-header fade-in">
+        <div className="section-header sf">
           <h1 className="section-title">Contact Me</h1>
           <div className="title-underline"></div>
           <p className="section-subtitle">Get in touch for opportunities or just to say hello!</p>
@@ -116,8 +119,8 @@ const Contact = () => {
         )}
 
         <div className="contact-content">
-          <div className="contact-info slide-in-left">
-            <div className="info-card fade-in">
+          <div className="contact-info">
+            <div className="info-card sf-left" style={{ transitionDelay: '0.2s' }}>
               <div className="info-icon">
                 <img src={profileImage} alt="Sathish Aithal" className="info-image" />
               </div>
@@ -127,7 +130,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info-card fade-in">
+            <div className="info-card sf-left" style={{ transitionDelay: '0.4s' }}>
               <div className="info-icon">📍</div>
               <div className="info-content">
                 <h3>Address</h3>
@@ -135,7 +138,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info-card fade-in">
+            <div className="info-card sf-left" style={{ transitionDelay: '0.6s' }}>
               <div className="info-icon">📧</div>
               <div className="info-content">
                 <h3>Email</h3>
@@ -143,7 +146,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info-card fade-in">
+            <div className="info-card sf-left" style={{ transitionDelay: '0.8s' }}>
               <div className="info-icon">💼</div>
               <div className="info-content">
                 <h3>Current Position</h3>
@@ -151,13 +154,13 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="availability">
+            <div className="availability sf-left" style={{ transitionDelay: '1.0s' }}>
               <h3>🟢 Available for Opportunities</h3>
               <p>Open to new projects and collaborations</p>
             </div>
           </div>
 
-          <div className="contact-form-container slide-in-right">
+          <div className="contact-form-container sf-right" style={{ transitionDelay: '0.3s' }}>
             <p className="coming-soon-note">Contact form coming soon. Please use email or social links for now.</p>
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               <div className="form-group">
@@ -241,7 +244,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="footer-note fade-in">
+        <div className="footer-note sf" style={{ transitionDelay: '0.1s' }}>
           <p>Created by Sathish Aithal V S - currently working as a Software Developer</p>
           <div className="social-links">
             <a href="https://github.com/sathishaithal" className="social-link">

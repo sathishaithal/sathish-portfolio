@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './Projects.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Projects = () => {
   const [showAll, setShowAll] = useState(false);
+  useScrollAnimation();
 
   const projects = [
     {
@@ -120,22 +122,18 @@ const Projects = () => {
   return (
     <div className="projects">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header sf">
           <h1 className="section-title">My Projects</h1>
           <div className="title-underline"></div>
           <p className="section-subtitle">A showcase of my professional, academic, and personal projects</p>
         </div>
 
         <div className="projects-stats">
-          <div className="stat-badge">
+          <div className="stat-badge sf-scale" style={{ transitionDelay: '0.25s' }}>
             <h3>8+</h3>
             <p>Total Projects</p>
           </div>
-          {/* <div className="stat-badge">
-            <h3>{ongoingProjects.length}</h3>
-            <p>Ongoing Projects</p>
-          </div> */}
-          <div className="stat-badge">
+          <div className="stat-badge sf-scale" style={{ transitionDelay: '0.5s' }}>
             <h3>4</h3>
             <p>Academic Projects</p>
           </div>
@@ -143,10 +141,14 @@ const Projects = () => {
 
         {ongoingProjects.length > 0 && (
           <div className="projects-section">
-            <h2 className="section-subtitle">Current Projects</h2>
+            <h2 className="section-subtitle sf" style={{ transitionDelay: '0.05s' }}>Current Projects</h2>
             <div className="projects-grid">
               {ongoingProjects.map((project, index) => (
-                <div key={project.id} className="project-card ongoing-card" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div
+                  key={project.id}
+                  className="project-card ongoing-card sf"
+                  style={{ transitionDelay: `${0.2 + index * 0.2}s` }}
+                >
                   <div className="project-badge ongoing-badge">Ongoing</div>
 
                   <div className="project-image">
@@ -177,10 +179,14 @@ const Projects = () => {
         )}
 
         <div className="projects-section">
-          <h2 className="section-subtitle">Academic and Other Projects</h2>
+          <h2 className="section-subtitle sf" style={{ transitionDelay: '0.05s' }}>Academic and Other Projects</h2>
           <div className="projects-grid">
             {displayedCompletedProjects.map((project, index) => (
-              <div key={project.id} className="project-card completed-card" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div
+                key={project.id}
+                className="project-card completed-card sf"
+                style={{ transitionDelay: `${0.2 + index * 0.2}s` }}
+              >
                 <div className="project-badge completed-badge">Completed</div>
 
                 <div className="project-image">

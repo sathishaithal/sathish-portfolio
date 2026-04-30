@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import profileImage from '../assets/images/profile.jpg';
 import { getExperienceYearsText } from '../utils/experience';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Home = () => {
   const [displayText, setDisplayText] = useState('');
@@ -10,6 +11,7 @@ const Home = () => {
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const experienceText = getExperienceYearsText();
+  useScrollAnimation();
 
   const texts = ['Web Developer', 'Software Developer', 'React Developer', 'MCA Graduate'];
 

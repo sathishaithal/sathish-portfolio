@@ -1,7 +1,10 @@
 import React from 'react';
 import './Education.css';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const Education = () => {
+  useScrollAnimation();
+
   const educationData = [
     {
       id: 1,
@@ -60,7 +63,7 @@ const Education = () => {
   return (
     <div className="education">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header sf">
           <h1 className="section-title">Education</h1>
           <div className="title-underline"></div>
           <p className="section-subtitle">My academic journey and qualifications</p>
@@ -69,7 +72,11 @@ const Education = () => {
         <div className="education-content">
           <div className="education-timeline">
             {educationData.map((edu, index) => (
-              <div key={edu.id} className="timeline-item" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div
+                key={edu.id}
+                className="timeline-item sf-left"
+                style={{ transitionDelay: `${0.2 + index * 0.25}s` }}
+              >
                 <div className="timeline-marker">
                   <div className="marker-icon">{edu.icon}</div>
                   <div className="timeline-line"></div>
@@ -99,7 +106,7 @@ const Education = () => {
           </div>
 
           <div className="education-sidebar">
-            <div className="academic-stats">
+            <div className="academic-stats sf-right" style={{ transitionDelay: '0.3s' }}>
               <h3 className="sidebar-title">Academic Highlights</h3>
               <div className="stats-grid">
                 <div className="academic-stat">
@@ -121,7 +128,7 @@ const Education = () => {
               </div>
             </div>
 
-            <div className="skills-developed">
+            <div className="skills-developed sf-right" style={{ transitionDelay: '0.6s' }}>
               <h3 className="sidebar-title">Skills Developed</h3>
               <div className="skills-tags">
                 <span className="skill-tag">Problem Solving</span>
