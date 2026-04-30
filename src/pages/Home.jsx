@@ -91,8 +91,8 @@ const Home = () => {
                   <p>Projects</p>
                 </div>
                 <div className="stat">
-                  <h3>{experienceText}</h3>
-                  <p>Experience</p>
+                  <h3>{experienceText.split(' ')[0]}</h3>
+                  <p>Years Exp</p>
                 </div>
                 <div className="stat">
                   <h3>10+</h3>
