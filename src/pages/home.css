@@ -142,31 +142,47 @@
   text-align: center;
   min-width: 160px;
 }
-
+/* Primary */
 .btn-primary {
-  background: var(--accent-gradient-strong);
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
   color: white;
-  box-shadow: 0 4px 15px var(--accent-glow);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.3);
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px var(--accent-glow);
-  background: var(--accent-gradient-reverse);
-}
-
+/* Secondary */
 .btn-secondary {
   background: transparent;
-  color: var(--accent);
-  border: 2px solid var(--accent);
+  color: #00c6ff;
+  border: 2px solid #00c6ff;
+}
+
+/* Resume */
+.btn-tertiary {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  color: #111;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.25);
+}
+
+/* ✅ SAME HOVER FOR ALL */
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Optional: Slight color boost on hover */
+.btn-primary:hover {
+  filter: brightness(1.1);
 }
 
 .btn-secondary:hover {
-  background: var(--accent);
+  background: #00c6ff;
   color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px var(--accent-glow);
 }
+
+.btn-tertiary:hover {
+  filter: brightness(1.05);
+}
+
 
 .hero-image {
   display: flex;

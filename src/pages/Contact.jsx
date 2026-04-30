@@ -98,7 +98,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header fade-in">
           <h1 className="section-title">Contact Me</h1>
           <div className="title-underline"></div>
           <p className="section-subtitle">Get in touch for opportunities or just to say hello!</p>
@@ -116,8 +116,8 @@ const Contact = () => {
         )}
 
         <div className="contact-content">
-          <div className="contact-info">
-            <div className="info-card">
+          <div className="contact-info slide-in-left">
+            <div className="info-card fade-in">
               <div className="info-icon">
                 <img src={profileImage} alt="Sathish Aithal" className="info-image" />
               </div>
@@ -127,7 +127,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info-card">
+            <div className="info-card fade-in">
               <div className="info-icon">📍</div>
               <div className="info-content">
                 <h3>Address</h3>
@@ -135,7 +135,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info-card">
+            <div className="info-card fade-in">
               <div className="info-icon">📧</div>
               <div className="info-content">
                 <h3>Email</h3>
@@ -143,7 +143,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="info-card">
+            <div className="info-card fade-in">
               <div className="info-icon">💼</div>
               <div className="info-content">
                 <h3>Current Position</h3>
@@ -157,7 +157,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="contact-form-container">
+          <div className="contact-form-container slide-in-right">
             <p className="coming-soon-note">Contact form coming soon. Please use email or social links for now.</p>
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               <div className="form-group">
@@ -241,7 +241,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="footer-note">
+        <div className="footer-note fade-in">
           <p>Created by Sathish Aithal V S - currently working as a Software Developer</p>
           <div className="social-links">
             <a href="https://github.com/sathishaithal" className="social-link">

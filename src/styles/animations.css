@@ -1,0 +1,28 @@
+/* GLOBAL ANIMATION SYSTEM */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-left {
+  transform: translateX(-60px);
+}
+
+.animate-left.show {
+  transform: translateX(0);
+}
+
+.animate-right {
+  transform: translateX(60px);
+}
+
+.animate-right.show {
+  transform: translateX(0);
+}

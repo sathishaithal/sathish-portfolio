@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css';
 import { getExperienceYearsText } from '../utils/experience';
 
 const About = () => {
   const experienceText = getExperienceYearsText();
 
+  // ensures animation triggers properly on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="about">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header fade-in">
           <h1 className="section-title">About Me</h1>
           <div className="title-underline"></div>
         </div>
 
         <div className="about-content">
           <div className="about-text">
-            <div className="intro-card">
+            <div className="intro-card fade-in">
               <h2>Hello! I'm Sathish Aithal V S</h2>
               <p>
                 I am a Software Developer and MCA graduate with experience in full-stack web development and
@@ -30,7 +35,7 @@ const About = () => {
             </div>
 
             <div className="experience-grid">
-              <div className="experience-card">
+              <div className="experience-card slide-in-left">
                 <div className="exp-icon">💼</div>
                 <h3>Software Developer</h3>
                 <p className="company">Tulasi Technologies</p>
@@ -44,7 +49,7 @@ const About = () => {
                 </ul>
               </div>
 
-              <div className="experience-card">
+              <div className="experience-card slide-in-right">
                 <div className="exp-icon">📊</div>
                 <h3>Data Analyst & Software Developer</h3>
                 <p className="company">BLUNET Ventures Private Limited (Internship)</p>
@@ -61,22 +66,22 @@ const About = () => {
           </div>
 
           <div className="about-stats">
-            <div className="stat-card">
+            <div className="stat-card fade-in">
               <div className="stat-number">8+</div>
               <div className="stat-label">Projects Completed</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card fade-in">
               <div className="stat-number">{experienceText}</div>
               <div className="stat-label">Professional Experience</div>
             </div>
-            <div className="stat-card">
+            <div className="stat-card fade-in">
               <div className="stat-number">10+</div>
               <div className="stat-label">Technologies</div>
             </div>
           </div>
         </div>
 
-        <div className="skills-overview">
+        <div className="skills-overview fade-in">
           <h3 className="overview-title">Technical Expertise</h3>
           <div className="skills-categories">
             <div className="skill-category">

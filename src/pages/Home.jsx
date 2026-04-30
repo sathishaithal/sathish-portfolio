@@ -59,18 +59,28 @@ const Home = () => {
               </div>
 
               <p className="hero-description">
-                Software Engineer focused on modern web development and machine learning. I currently build
+                Software Engineer focused on modern web development and full-stack development. I currently build
                 enterprise solutions with React, Angular, PHP, and full-stack technologies, creating scalable
                 applications that solve real business problems.
               </p>
 
               <div className="hero-buttons">
                 <Link to="/projects" className="btn btn-primary">
-                  View My Projects
+                  View Projects
                 </Link>
+
                 <Link to="/contact" className="btn btn-secondary">
-                  Get In Touch
+                  Contact
                 </Link>
+
+                <a
+                  href="./Sathish_Aithal_V_S_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-tertiary"
+                >
+                  Resume
+                </a>
               </div>
 
               <div className="quick-stats">
