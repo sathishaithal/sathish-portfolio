@@ -271,12 +271,11 @@
     box-shadow: 0 10px 25px var(--accent-glow);
   }
 
-  .nav-link:active,
-  .theme-toggle:active {
-    opacity: 0.75;
-    border-radius: 30px;
-    overflow: hidden;
-  }
+.nav-link:active,
+.theme-toggle:active {
+  transform: scale(0.97);
+  background: transparent;
+}
 
   .navbar {
     padding: 0.75rem 0;
