@@ -5,6 +5,7 @@ export function getExperienceYearsText(currentDate = new Date()) {
     (currentDate.getFullYear() - JOIN_DATE.getFullYear()) * 12 +
     (currentDate.getMonth() - JOIN_DATE.getMonth());
 
-  const years = (Math.max(totalMonths, 0) / 12).toFixed(1);
-  return `${years} Years`;
+  const years = Math.round((totalMonths / 12) * 2) / 2;
+
+  return `${years.toFixed(1)}+ Years`;
 }
