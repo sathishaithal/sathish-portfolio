@@ -20,19 +20,31 @@ const Skills = () => {
     {
       category: 'Backend & Databases',
       items: [
-        { name: 'Laravel', level: 75, icon: '🐘' },
         { name: 'Python', level: 80, icon: '🐍' },
         { name: 'PHP', level: 75, icon: '🔷' },
+        { name: 'Flask', level: 70, icon: '🧪' },
         { name: 'MySQL', level: 80, icon: '🗄️' },
+        { name: 'PostgreSQL', level: 75, icon: '🐘' },
+        { name: 'MongoDB', level: 70, icon: '🍃' },
         { name: 'Java', level: 70, icon: '☕' },
         { name: 'C++', level: 65, icon: '⚙️' },
       ],
     },
     {
+      category: 'Machine Learning',
+      items: [
+        { name: 'XGBoost', level: 75, icon: '🤖' },
+        { name: 'Gradient Boosting', level: 75, icon: '📈' },
+        { name: 'Scikit-learn', level: 70, icon: '🔬' },
+      ],
+    },
+    {
       category: 'Tools & Others',
       items: [
+        { name: 'Git', level: 80, icon: '🌿' },
         { name: 'GitHub', level: 80, icon: '🐙' },
-        { name: 'Machine Learning', level: 75, icon: '🤖' },
+        { name: 'Postman', level: 75, icon: '📮' },
+        { name: 'VS Code', level: 85, icon: '💻' },
         { name: 'Android Studio', level: 70, icon: '📱' },
         { name: 'TypeScript', level: 70, icon: '🔷' },
       ],
@@ -91,7 +103,7 @@ const Skills = () => {
             <h3>🎯 Current Focus</h3>
             <p>
               I am currently strengthening my React ecosystem knowledge, exploring advanced machine learning,
-              and building full-stack applications with modern architectures using Laravel and Angular.
+              and building full-stack applications with modern architectures using PHP and Angular.
             </p>
           </div>
 

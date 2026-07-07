@@ -38,17 +38,18 @@ const About = () => {
                 <p className="company">Tulasi Technologies</p>
                 <p className="duration">Jan 2025 - Present</p>
                 <ul className="responsibilities">
-                  <li>Developing enterprise ERP systems and business intelligence dashboards using Angular, PHP, and MySQL</li>
-                  <li>Building responsive web applications with Laravel, React, and TypeScript</li>
-                  <li>Implementing REST APIs and optimizing database performance for high-traffic applications</li>
-                  <li>Collaborating with cross-functional teams to deliver scalable and maintainable software solutions</li>
-                  <li>Integrating analytics and visualization features for real-time business insights</li>
+                  <li>Developed and maintained enterprise ERP modules covering Sales, Inventory, Finance, Billing, Authorization, GST, e-Invoicing, and Reporting using PHP and MySQL</li>
+                  <li>Designed and built interactive analytics dashboards using Angular and TypeScript, improving API response performance by approximately 40% through optimized backend queries and efficient frontend data handling</li>
+                  <li>Designed and implemented RESTful APIs for ERP modules to enable seamless communication between frontend and backend systems</li>
+                  <li>Optimized complex MySQL queries, reporting logic, and backend processing for large transactional datasets, significantly improving report generation performance</li>
+                  <li>Collaborated with cross-functional teams to build scalable ERP applications, implement new business requirements, and deliver production-ready software solutions</li>
+                  <li>Participated in requirement analysis, debugging, feature enhancements, database modifications, deployment, and production support</li>
                 </ul>
               </div>
 
               <div className="experience-card sf-right" style={{ transitionDelay: '0.75s' }}>
                 <div className="exp-icon">📊</div>
-                <h3>Data Analyst & Software Developer</h3>
+                <h3>Data Analyst and Software Developer Intern</h3>
                 <p className="company">BLUNET Ventures Private Limited (Internship)</p>
                 <p className="duration">Oct 2023 - Dec 2023</p>
                 <ul className="responsibilities">
@@ -87,7 +88,7 @@ const About = () => {
             </div>
             <div className="skill-category sf" style={{ transitionDelay: '0.4s' }}>
               <h4>Backend Development</h4>
-              <p>PHP, Laravel, Node.js, Express, REST APIs, MySQL, MongoDB</p>
+              <p>PHP, Node.js, Express, REST APIs, MySQL, PostgreSQL</p>
             </div>
             <div className="skill-category sf" style={{ transitionDelay: '0.6s' }}>
               <h4>Data Science & ML</h4>

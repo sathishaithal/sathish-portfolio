@@ -15,7 +15,7 @@ const Projects = () => {
       status: 'ongoing',
       description:
         'Enterprise resource planning system for managing finance, HR, inventory, and customer workflows with real-time business insights.',
-      technologies: ['PHP', 'MySQL', 'Laravel', 'JavaScript', 'HTML', 'CSS'],
+      technologies: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
       image: '🏢',
     },
     {
@@ -31,13 +31,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: 'MERN ERP Reporting Module',
+      title: 'ERP Reporting Dashboard',
       year: '2024',
       type: 'Company Project',
       status: 'ongoing',
       description:
-        'Reporting module built with the MERN stack for ERP systems, featuring dynamic reports, exports, and customizable analytics dashboards.',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT'],
+        'High-performance ERP reporting dashboard with RESTful APIs for report generation and analytics. Improved dashboard loading and rendering performance by over 60% compared to the previous Angular implementation, with JWT-based authentication and role-based access control (RBAC).',
+      technologies: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'JWT', 'RBAC'],
       image: '📈',
     },
     {
@@ -97,7 +97,7 @@ const Projects = () => {
       description:
         'Web-based product comparison system for phones, TVs, tablets, and laptops with user queries and admin support features.',
       technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL'],
-      link: '#',
+      link: null,
       image: '🛒',
     },
     {
@@ -109,7 +109,7 @@ const Projects = () => {
       description:
         'Banking system with dummy customer records, transfer tracking, and transaction history management for basic operations.',
       technologies: ['Web Development', 'Database', 'Banking'],
-      link: '#',
+      link: null,
       image: '🏦',
     },
   ];
@@ -134,7 +134,7 @@ const Projects = () => {
             <p>Total Projects</p>
           </div>
           <div className="stat-badge sf-scale" style={{ transitionDelay: '0.5s' }}>
-            <h3>4</h3>
+            <h3>3</h3>
             <p>Academic Projects</p>
           </div>
         </div>
@@ -210,12 +210,14 @@ const Projects = () => {
                     ))}
                   </div>
 
-                  <div className="project-actions">
-                    <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                      {project.id === 4 || project.id === 5 ? 'View Project' : 'View Details'}
-                      <span className="link-arrow">→</span>
-                    </a>
-                  </div>
+                  {project.link && (
+                    <div className="project-actions">
+                      <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
+                        View Project
+                        <span className="link-arrow">→</span>
+                      </a>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
